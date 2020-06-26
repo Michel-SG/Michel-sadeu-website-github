@@ -1,0 +1,239 @@
+@mixin prop-body {
+    width: $width-container;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 13px;
+    margin: $margin-init;
+    padding: $padding-init;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255,255,255);
+}
+@mixin prop-header {
+    width: $width-container;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin:$margin-init $margin-init 15px $margin-init;
+    padding:$padding-init;
+    height:80px;
+    color: $cd-header;
+    background-color: $cd-bg;   
+}
+@mixin nav-container{
+   width: 100%;
+   margin-top: 7px;
+   padding: $padding-init;
+}
+@mixin nav-menu{
+    padding-bottom:5px;
+    justify-content: center;
+    margin: $margin-init auto;
+    display: grid;  
+    grid-template-columns: $grid-column $grid-column;
+    grid-template-rows: $grid-row $grid-row;
+    grid-gap: 15px;
+    
+}
+@mixin nav-ico{
+    background-image: linear-gradient(to left, rgba(255,110,64,1), rgba(216,67,21,1));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+@mixin partial-enchantee-ico{
+ background-image: linear-gradient(to left, rgb(255,110,64), rgb(216,67,21));
+    color: transparent;
+    -webkit-background-clip: text;
+    padding: 7px;
+}
+@mixin note-paragraph{
+    margin-top: 30px;
+    font-family: 'Devonshire', cursive;
+    font-size: 20px;
+}
+@mixin chic-paragraph{
+    margin-top: $marge-para; 
+    font-family: 'Domine', serif;
+    -webkit-background-clip: text;
+    font-size: 14px;
+}
+@mixin delice-paragraph{
+    margin-top: $marge-para;
+    font-family: 'Cookie', cursive;
+    font-size: 20px;
+    -webkit-background-clip: text;
+}
+@mixin palette-paragraph{
+    margin-top: $marge-para; 
+    font-family: 'Kaushan Script', cursive;
+    font-size: 18px; 
+    -webkit-background-clip: text;
+}
+@mixin partial-enchantee-paragraph{
+    font-family: 'Devonshire', cursive;
+    font-size: 37px;
+    font-weight: normal;
+    text-align:center;
+}
+@mixin note-head{
+    font-family: 'Kalam', cursive;
+    text-transform:uppercase;
+    font-size: 25px;
+}
+@mixin chic-head{
+    text-decoration:none;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing:2px;
+    font-size: 25px;
+}
+@mixin delice-head{
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+}
+@mixin pseudo-pos{
+    content: "";
+    position: absolute;
+    top:$padding-init;
+    right: $padding-init;
+    bottom:$padding-init;
+    left:$padding-init;
+}
+@mixin main-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center; 
+}
+@mixin page-size{
+    width: 70%;
+    margin: 20px auto;
+    padding: 1px  $padding-init;
+    box-shadow: $padding-init $padding-init 25px rgb(226,226,226);
+}
+@mixin enchanteebar-property{
+    display: block;
+	height: 40px;
+	width:130px;
+    margin:$margin-init auto; 
+	background: $cd-enchanteebar-1;
+	background: linear-gradient(45deg, $cd-enchanteebar-1,$cd-enchanteebar-1); 
+}
+@mixin enchanteebar-1{
+    content: "";
+    clip-path: polygon(8% 69%, 8% 63%, 9% 62%, 
+	10% 58%, 34% 57%, 53% 57%, 63% 54%, 73% 54%, 
+	96% 56%, 96% 62%, 74% 66%, 54% 65%, 35% 65%);
+	@include enchanteebar-property; 
+}
+
+@mixin enchanteebar-2{
+    content: "";
+	clip-path: polygon(8% 68%, 8% 60%, 17% 60%, 
+	27% 60%, 39% 60%, 50% 60%, 71% 60%, 83% 63%, 
+	94% 63%, 95% 69%, 72% 69%, 54% 69%, 38% 68%);
+	@include enchanteebar-property;
+}
+@mixin partial-enchanteebar{
+    width: 100%;
+    margin: $margin-init auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+@mixin chicbar-prop{
+    content: "";
+    clip-path: polygon(4% 53%, 26% 52%, 43% 51%, 69% 49%, 
+    79% 53%, 84% 54%, 78% 54%, 69% 57%, 43% 55%, 25% 54%);
+    display: block;
+    height: 60px;
+    width:160px;
+    margin: $margin-init auto;
+}
+@mixin partial-chicbar-prop{
+    width: 100%;
+    margin: $margin-init auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+@mixin delicebar-before{
+    content: "";
+    clip-path: polygon(9% 42%, 12% 45%, 14% 46%, 62% 47%, 
+    94% 48%, 95% 53%, 62% 52%, 15% 51%, 13% 50%, 10% 45%);
+    display: block;
+    height: 60px;
+    width:160px;
+    margin: $margin-init auto;
+}
+@mixin partial-delicebar{
+    width: 100%;
+    margin: $margin-init auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    grid-gap: 13px;
+}
+@mixin palettebar-before{
+    content: "";
+    clip-path: polygon(1% 49%, 1% 43%, 13% 43%, 15% 43%, 18% 42%, 
+    21% 42%, 41% 42%, 43% 43%, 45% 43%, 59% 43%, 62% 43%, 65% 43%,
+    97% 44%, 97% 45%, 88% 46%, 84% 47%, 81% 48%, 69% 49%, 65% 49%,
+    62% 50%, 51% 50%, 48% 49%, 47% 49%);
+    display: block;
+    height: 60px;
+    width:160px;
+    margin: $margin-init auto;
+}
+@mixin partial-palettebar{
+    width: 100%;
+    margin: $margin-init auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+@mixin below-line-prop{
+    content: "";
+    position: absolute;
+    bottom: 105px;
+    left: 170px;
+    width: $padding-init;
+    height: 0.1em;
+    background-color: rgba(255,255,255,0.1);
+    transition: 500ms ease-in-out;
+}
+@mixin desabled-1{
+    -webkit-background-clip: text;
+    font-size: 26px;
+    margin-top: 65px;
+    margin-bottom: 18px;
+    font-family: 'Domine', serif;
+}
+@mixin desabled-2{
+    font-family: 'Cookie', cursive;
+    font-size: 37px;
+    font-weight: normal;
+    -webkit-background-clip: text;
+    margin-top: 65px;
+}
+@mixin desabled-3{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 35px; 
+    -webkit-background-clip: text;
+    margin-top: 65px;
+}
+@mixin main-grid{
+    width:80%;
+    margin: $margin-init auto;
+    display: grid;  
+    grid-template-columns: 3fr 0.2fr;
+    grid-template-rows: 20px 20px 20px;
+    font-family: 'Kalam', cursive;
+    color: $cd-enchanteebar-1;
+}
+@mixin chic-grid-end{
+    width:80%;
+    margin: $margin-init auto;
+    display: grid;  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,25px);
+    font-family: 'Kalam', cursive;
+}

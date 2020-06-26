@@ -1,0 +1,41 @@
+.container-button{
+  margin: 15px auto;
+  font-size: 16px;
+  color: $cd-header;
+  font-weight: bold;
+  background-color: $cd-bg;
+  border-radius: 6px;
+  border: 1px solid $cd-bg;
+  text-align: center;
+  padding: 0px;
+  height: 45px;
+  width: 195px;
+  a{
+    color: $cd-header;
+  }
+  &--button::after{
+	  content: "\2026";
+    position: absolute;
+    padding-left: 10px;
+    overflow: hidden;
+    animation: ellipsis steps(4) 1.3s infinite;
+  }
+}
+@media screen and (max-width: 576px){
+  .container-button{
+    margin-bottom: 70px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width:577px) and (max-width: 768px){
+  .container-button{
+    margin-bottom: 70px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width:1024px){
+  .container-button{
+    margin-bottom: 80px;
+    font-size: 17px;
+  }
+}

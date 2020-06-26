@@ -1,0 +1,6 @@
+header{
+    @include prop-header;
+    a{
+        color: $cd-header;
+    }
+}
